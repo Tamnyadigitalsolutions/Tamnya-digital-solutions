@@ -1,120 +1,1011 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAMNYA DIGITAL SOLUTIONS</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#172033;line-height:1.6}
-header{background:#0b1f3a;color:white;padding:18px 5%;position:sticky;top:0}
-nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:20px;font-weight:bold}
-.logo span{color:#21b573}
-nav a{color:white;text-decoration:none;margin-left:18px}
-.hero{background:linear-gradient(135deg,#0b1f3a,#123e68);color:white;padding:90px 7%}
-.hero h1{font-size:48px;line-height:1.1;margin-bottom:20px}
-.hero h1 span{color:#21b573}
-.hero p{font-size:19px;max-width:700px;margin-bottom:30px}
-.btn{display:inline-block;background:#21b573;color:white;padding:13px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin-right:8px}
-.btn.white{background:white;color:#0b1f3a}
-section{padding:65px 7%}
-.title{text-align:center;margin-bottom:35px}
-.title h2{font-size:34px;color:#0b1f3a}
-.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{padding:25px;border:1px solid #e1e6ed;border-radius:12px;box-shadow:0 5px 20px #0000000d}
-.card h3{color:#0b1f3a;margin:10px 0}
-.icon{font-size:30px}
-.about{background:#f5f8fb}
-.aboutbox{max-width:1100px;margin:auto}
-.aboutbox h2{font-size:35px;color:#0b1f3a;margin-bottom:15px}
-.contact{background:#0b1f3a;color:white;text-align:center}
-.contact h2{color:white}
-footer{background:#07152a;color:#ccc;text-align:center;padding:25px}
-@media(max-width:700px){
-nav a{display:none}
-.hero{padding:65px 7%}
-.hero h1{font-size:38px}
-.grid{grid-template-columns:1fr}
-section{padding:50px 7%}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="TAMNYA DIGITAL SOLUTIONS - Digital services, document support, data collection and online business solutions in Gembu, Sardauna LGA, Taraba State, Nigeria.">
+
+  <title>TAMNYA DIGITAL SOLUTIONS</title>
+
+  <style>
+    :root {
+      --primary: #087f8c;
+      --primary-dark: #05616b;
+      --accent: #f2c94c;
+      --dark: #14212b;
+      --light: #f5fafb;
+      --white: #ffffff;
+      --muted: #60717b;
+      --shadow: 0 10px 30px rgba(20,33,43,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 14px rgba(0,0,0,.07);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* PROFESSIONAL TEXT LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      border: 3px solid var(--accent);
+      box-shadow: 0 5px 15px rgba(8,127,140,.25);
+    }
+
+    .logo-text {
+      font-weight: 900;
+      font-size: 1rem;
+      line-height: 1.1;
+      color: var(--primary);
+      letter-spacing: .3px;
+    }
+
+    .logo-text small {
+      display: block;
+      color: var(--muted);
+      font-size: .63rem;
+      margin-top: 4px;
+      letter-spacing: .6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu {
+      display: none;
+      font-size: 1.7rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg,#e9f8fa,#ffffff 55%,#fff7d9);
+      padding: 90px 0 75px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #d9f1f3;
+      color: var(--primary-dark);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .85rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem,6vw,4.4rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 9px;
+      font-weight: 800;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      border-top: 6px solid var(--accent);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: .98rem;
+      margin-bottom: 0;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+    }
+
+    .section-head h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .panel {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h3 {
+      margin-bottom: 12px;
+      color: var(--primary-dark);
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+    .service {
+      padding: 28px;
+      border: 1px solid #e5eef0;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 5px 18px rgba(0,0,0,.05);
+    }
+
+    .service .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: var(--muted);
+    }
+
+    /* WHY US */
+
+    .why {
+      background: var(--dark);
+      color: white;
+    }
+
+    .why .section-head p {
+      color: #c9d4d9;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+    }
+
+    .why-card h3 {
+      margin: 10px 0 6px;
+    }
+
+    .why-card p {
+      color: #c9d4d9;
+      font-size: .92rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #edf1f2;
+    }
+
+    .contact-item:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--primary-dark);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0d171e;
+      color: #c9d4d9;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    .footer-logo {
+      margin-bottom: 12px;
+    }
+
+    .footer-logo .logo-mark {
+      margin: 0 auto 10px;
+    }
+
+    .small {
+      font-size: .9rem;
+      margin-top: 8px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+    }
+
+    @media(max-width:480px) {
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .logo-mark {
+        width: 43px;
+        height: 43px;
+      }
+
+      .logo-text {
+        font-size: .9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<nav>
-<div class="logo">TAMNYA <span>DIGITAL SOLUTIONS</span></div>
-<div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-</header>
+  <!-- HEADER -->
 
-<section class="hero" id="home">
-<h1>Smart Digital Solutions<br><span>for People & Businesses.</span></h1>
-<p>TAMNYA DIGITAL SOLUTIONS provides practical digital, ICT and technology services for individuals, businesses and organisations.</p>
-<a class="btn" href="#services">Our Services</a>
-<a class="btn white" href="#contact">Contact Us</a>
-</section>
+  <header>
 
-<section id="services">
-<div class="title">
-<h2>Our Services</h2>
-<p>Practical technology services designed around your needs.</p>
-</div>
+    <div class="container">
 
-<div class="grid">
-<div class="card"><div class="icon">💻</div><h3>Website Solutions</h3><p>Professional and mobile-friendly websites for businesses and organisations.</p></div>
+      <nav>
 
-<div class="card"><div class="icon">📱</div><h3>Digital Services</h3><p>Support with online platforms, digital applications and everyday technology needs.</p></div>
+        <!-- TAMNYA LOGO -->
 
-<div class="card"><div class="icon">📊</div><h3>Data & Field Support</h3><p>Digital data collection, field support and information management services.</p></div>
+        <a class="logo" href="#home">
 
-<div class="card"><div class="icon">🖨️</div><h3>Printing & Documents</h3><p>Professional documents, forms and digital materials.</p></div>
+          <div class="logo-mark">
+            TD
+          </div>
 
-<div class="card"><div class="icon">🔧</div><h3>ICT Support</h3><p>Practical assistance with computers, phones, software and digital problems.</p></div>
+          <div class="logo-text">
+            TAMNYA DIGITAL SOLUTIONS
+            <small>Digital Solutions You Can Trust</small>
+          </div>
 
-<div class="card"><div class="icon">🚀</div><h3>Business Growth</h3><p>Digital ideas and tools to help small businesses become more visible and efficient.</p></div>
-</div>
-</section>
+        </a>
 
-<section class="about" id="about">
-<div class="aboutbox">
-<h2>Technology made simple.</h2>
-<p>TAMNYA DIGITAL SOLUTIONS is focused on providing accessible, reliable and practical digital services.</p>
-<p>We believe technology should solve real problems—not create more problems.</p>
-<br>
-<h3>Why choose TAMNYA?</h3>
-<ul>
-<li>Professional and practical service</li>
-<li>Mobile-friendly digital solutions</li>
-<li>Clear communication with clients</li>
-<li>Solutions designed for real-world needs</li>
-</ul>
-</div>
-</section>
 
-<section class="contact" id="contact">
-<div class="title">
-<h2>Let's Work Together</h2>
-<p>Contact TAMNYA DIGITAL SOLUTIONS for your next digital project.</p>
-</div>
-<h3>Phone</h3>
-<p>+234 XXX XXX XXXX</p>
-<br>
-<h3>Email</h3>
-<p>info@tamnya.com</p>
-</section>
+        <ul class="nav-links">
 
-<footer>
-<p>© 2026 TAMNYA DIGITAL SOLUTIONS. All rights reserved.</p>
-</footer>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#services">Services</a>
+          </li>
+
+          <li>
+            <a href="#why">Why Us</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+
+        <div class="menu">
+          ☰
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="badge">
+            Serving Gembu & Beyond
+          </div>
+
+          <h1>
+            Smart <span>Digital Solutions</span>
+            for People & Businesses.
+          </h1>
+
+          <p>
+            TAMNYA DIGITAL SOLUTIONS provides practical digital,
+            document, data and online business support to individuals,
+            organizations and small businesses.
+          </p>
+
+
+          <div class="buttons">
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/2347084699832"
+              target="_blank">
+
+              Chat on WhatsApp
+
+            </a>
+
+
+            <a
+              class="btn btn-outline"
+              href="#services">
+
+              View Our Services
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <h3>
+            Your Local Digital Support Partner
+          </h3>
+
+          <p>
+            From digital applications and document preparation
+            to data collection and helping businesses establish
+            an online presence, we make digital tasks simpler
+            and more accessible.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            About TAMNYA DIGITAL SOLUTIONS
+          </h2>
+
+          <p>
+            Professional, practical and customer-focused digital support.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+          <div class="panel">
+
+            <h3>
+              Who We Are
+            </h3>
+
+            <p>
+              TAMNYA DIGITAL SOLUTIONS is a digital services business
+              based in Gembu, Sardauna Local Government Area,
+              Taraba State, Nigeria.
+
+              We help individuals, organizations and small businesses
+              handle important digital and document-related tasks.
+            </p>
+
+          </div>
+
+
+          <div class="panel">
+
+            <h3>
+              Our Goal
+            </h3>
+
+            <p>
+              Our goal is to provide reliable and convenient digital
+              solutions that save customers time, improve access to
+              services and help local businesses build a stronger
+              presence online.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Our Services
+          </h2>
+
+          <p>
+            Solutions designed around the everyday digital needs
+            of our customers.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <div class="service">
+
+            <div class="icon">
+              💻
+            </div>
+
+            <h3>
+              Digital & Online Services
+            </h3>
+
+            <p>
+              Support with digital services, online applications
+              and other technology-enabled tasks.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              📄
+            </div>
+
+            <h3>
+              Document Preparation & Printing
+            </h3>
+
+            <p>
+              Document preparation, formatting, printing and
+              related support for personal and business needs.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              📊
+            </div>
+
+            <h3>
+              Data Collection & Digital Fieldwork
+            </h3>
+
+            <p>
+              Digital data collection and fieldwork support using
+              modern tools and practical workflows.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              🏪
+            </div>
+
+            <h3>
+              Digital Support for Small Businesses
+            </h3>
+
+            <p>
+              Practical digital assistance to help small businesses
+              work more efficiently and reach customers.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              🌐
+            </div>
+
+            <h3>
+              Online Business Presence
+            </h3>
+
+            <p>
+              Support for businesses that want to establish or
+              improve their presence on the internet.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why" id="why">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Why Choose Us?
+          </h2>
+
+          <p>
+            We focus on making digital services simple,
+            useful and accessible.
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+          <div class="why-card">
+
+            <div>🤝</div>
+
+            <h3>
+              Customer Focus
+            </h3>
+
+            <p>
+              We listen to what customers need and provide
+              practical support.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div>⚡</div>
+
+            <h3>
+              Convenient
+            </h3>
+
+            <p>
+              We help reduce the time and difficulty involved
+              in digital tasks.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div>🎯</div>
+
+            <h3>
+              Professional
+            </h3>
+
+            <p>
+              We aim for accurate, clear and dependable service.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div>📍</div>
+
+            <h3>
+              Local Support
+            </h3>
+
+            <p>
+              Based in Gembu, we understand the needs of
+              our local community.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Contact Us
+          </h2>
+
+          <p>
+            Ready to get started?
+            Contact TAMNYA DIGITAL SOLUTIONS today.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <div class="contact-card">
+
+
+            <div class="contact-item">
+
+              <strong>
+                📱 Phone / WhatsApp
+              </strong>
+
+              <a href="tel:+2347084699832">
+                07084699832
+              </a>
+
+              <br>
+
+              <a href="tel:+2349066677286">
+                09066677286
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                📧 Email
+              </strong>
+
+              <a href="mailto:tamnyadigitalsolutions@gmail.com">
+                tamnyadigitalsolutions@gmail.com
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                📍 Location
+              </strong>
+
+              Gembu, Sardauna Local Government Area,
+              Taraba State, Nigeria
+
+            </div>
+
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <h3>
+              Let's Work Together
+            </h3>
+
+            <p style="color:#60717b;margin:12px 0 20px">
+
+              Tell us what digital service you need and
+              we'll help you find a practical solution.
+
+            </p>
+
+
+            <div class="buttons">
+
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/2347084699832"
+                target="_blank">
+
+                WhatsApp Us
+
+              </a>
+
+
+              <a
+                class="btn btn-outline"
+                href="mailto:tamnyadigitalsolutions@gmail.com">
+
+                Send Email
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-logo">
+
+        <div class="logo-mark">
+          TD
+        </div>
+
+      </div>
+
+      <strong>
+        TAMNYA DIGITAL SOLUTIONS
+      </strong>
+
+      <div class="small">
+        Digital Solutions You Can Trust •
+        Gembu, Taraba State, Nigeria
+      </div>
+
+      <div class="small">
+        📱 07084699832 • 09066677286
+      </div>
+
+      <div class="small">
+        📧 tamnyadigitalsolutions@gmail.com
+      </div>
+
+      <div class="small">
+        © 2026 TAMNYA DIGITAL SOLUTIONS.
+        All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </body>
-  </html>
+</html>
