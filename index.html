@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Tamnya Digital Solutions — making digital services simple. Online applications, CVs, document support, data collection and digital assistance.">
+
+  <meta name="theme-color" content="#102a56">
+
   <title>Tamnya Digital Solutions</title>
 
   <style>
@@ -54,11 +58,12 @@
       margin: auto;
     }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255,255,255,.94);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(228,234,242,.85);
     }
@@ -77,12 +82,14 @@
       gap: 12px;
       font-weight: 800;
       color: var(--navy);
+      min-width: 0;
     }
 
     .brand img {
       width: 48px;
       height: 48px;
       object-fit: contain;
+      flex-shrink: 0;
     }
 
     .brand span {
@@ -136,6 +143,7 @@
       transform: translateY(-2px);
     }
 
+    /* HERO */
     .hero {
       background:
         radial-gradient(circle at 85% 20%, rgba(243,181,27,.16), transparent 28%),
@@ -222,6 +230,7 @@
       font-size: .95rem;
     }
 
+    /* GENERAL SECTIONS */
     section {
       padding: 86px 0;
     }
@@ -243,6 +252,7 @@
       color: var(--muted);
     }
 
+    /* SERVICES */
     .services {
       background: var(--offwhite);
     }
@@ -259,6 +269,12 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: 0 8px 30px rgba(16,42,86,.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(16,42,86,.09);
     }
 
     .icon {
@@ -271,6 +287,7 @@
       border-radius: 14px;
       font-size: 1.4rem;
       margin-bottom: 18px;
+      font-weight: 900;
     }
 
     .service h3 {
@@ -283,6 +300,7 @@
       font-size: .95rem;
     }
 
+    /* ABOUT */
     .why-grid {
       display: grid;
       grid-template-columns: .9fr 1.1fr;
@@ -339,6 +357,82 @@
       font-size: .94rem;
     }
 
+    /* FOUNDER */
+    .founder {
+      background: white;
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 45px;
+      align-items: center;
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+    }
+
+    .founder-photo {
+      width: 240px;
+      height: 280px;
+      margin: auto;
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, #102a56, #193d76);
+      border: 6px solid white;
+      box-shadow: 0 15px 35px rgba(16,42,86,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      color: white;
+    }
+
+    .founder-photo-placeholder {
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    .founder-photo-placeholder strong {
+      display: block;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .founder-content .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .founder-content h2 {
+      color: var(--navy-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .founder-title {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .founder-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .founder-signature {
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    /* PROCESS */
     .process {
       background: var(--offwhite);
     }
@@ -379,6 +473,7 @@
       font-size: .94rem;
     }
 
+    /* CTA */
     .cta {
       padding: 70px 0;
       background: linear-gradient(135deg, var(--navy-dark), var(--navy));
@@ -397,6 +492,7 @@
       margin: 0 auto 25px;
     }
 
+    /* CONTACT */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -435,6 +531,7 @@
       color: var(--navy);
     }
 
+    /* FOOTER */
     footer {
       background: #07162f;
       color: #d6e0ef;
@@ -449,14 +546,17 @@
       flex-wrap: wrap;
     }
 
+    /* MOBILE */
     @media (max-width: 850px) {
+
       nav {
         display: none;
       }
 
       .hero-grid,
       .why-grid,
-      .contact-grid {
+      .contact-grid,
+      .founder-card {
         grid-template-columns: 1fr;
       }
 
@@ -468,9 +568,23 @@
       .hero {
         padding-top: 65px;
       }
+
+      .founder-card {
+        text-align: center;
+      }
+
+      .founder-content .eyebrow {
+        justify-content: center;
+      }
+
+      .founder-photo {
+        width: 220px;
+        height: 260px;
+      }
     }
 
     @media (max-width: 560px) {
+
       .service-grid,
       .steps {
         grid-template-columns: 1fr;
@@ -485,12 +599,26 @@
       }
 
       .brand span {
-        font-size: .9rem;
+        font-size: .82rem;
       }
 
       .nav-cta {
         padding: 10px 14px;
         font-size: .85rem;
+      }
+
+      .founder-card {
+        padding: 28px 20px;
+      }
+
+      .founder-photo {
+        width: 190px;
+        height: 230px;
+      }
+
+      .footer-inner {
+        text-align: center;
+        justify-content: center;
       }
     }
   </style>
@@ -502,13 +630,19 @@
   <div class="container nav">
 
     <a class="brand" href="#home">
-      <img src="assets/tamnya-logo.png" alt="Tamnya Digital Solutions logo">
+      <img
+        src="assets/tamnya-logo.png"
+        alt="Tamnya Digital Solutions logo"
+        onerror="this.style.display='none';"
+      >
+
       <span>TAMNYA DIGITAL SOLUTIONS</span>
     </a>
 
     <nav>
       <a href="#services">Services</a>
       <a href="#about">Why Us</a>
+      <a href="#founder">Founder</a>
       <a href="#process">How It Works</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -518,24 +652,31 @@
   </div>
 </header>
 
+
 <main>
 
+  <!-- HERO -->
   <section class="hero" id="home">
+
     <div class="container hero-grid">
 
       <div>
-        <div class="eyebrow">Digital support you can trust</div>
+
+        <div class="eyebrow">
+          Digital support you can trust
+        </div>
 
         <h1>
           Making <span>Digital Services</span> Simple.
         </h1>
 
         <p>
-          We help individuals, students, job seekers and small businesses handle
-          digital tasks with clarity, accuracy and confidence.
+          We help individuals, students, job seekers and small businesses
+          handle digital tasks with clarity, accuracy and confidence.
         </p>
 
         <div class="actions">
+
           <a class="btn btn-primary" href="#contact">
             Request a Service
           </a>
@@ -543,14 +684,18 @@
           <a class="btn btn-secondary" href="#services">
             Explore Services
           </a>
+
         </div>
+
       </div>
+
 
       <div class="hero-card">
 
         <img
           src="assets/tamnya-logo.png"
-          alt="Tamnya Digital Solutions"
+          alt="Tamnya Digital Solutions logo"
+          onerror="this.style.display='none';"
         >
 
         <h3>Your Digital Solution Partner</h3>
@@ -563,180 +708,370 @@
       </div>
 
     </div>
+
   </section>
 
 
+  <!-- SERVICES -->
   <section class="services" id="services">
 
     <div class="container">
 
       <div class="section-head">
+
         <h2>What We Can Help You Solve</h2>
 
         <p>
           Simple, professional support for people who need to get digital work
           done correctly.
         </p>
+
       </div>
+
 
       <div class="service-grid">
 
         <article class="service">
+
           <div class="icon">⌨</div>
+
           <h3>Online Applications</h3>
+
           <p>
             Assistance with online job, scholarship, school and opportunity
             applications, including document uploads and form completion.
           </p>
+
         </article>
 
+
         <article class="service">
+
           <div class="icon">CV</div>
+
           <h3>CV & Motivation Letters</h3>
+
           <p>
             Professional CV formatting and tailored motivation letters designed
             to present your experience clearly.
           </p>
+
         </article>
 
+
         <article class="service">
+
           <div class="icon">▣</div>
+
           <h3>Document Services</h3>
+
           <p>
             Scanning, PDF preparation, document conversion, compression,
             formatting and other digital document support.
           </p>
+
         </article>
 
+
         <article class="service">
+
           <div class="icon">◉</div>
+
           <h3>Data Collection Support</h3>
+
           <p>
             Digital field-data support, survey assistance and KoboCollect-related
             services for research and field projects.
           </p>
+
         </article>
 
+
         <article class="service">
+
           <div class="icon">▤</div>
+
           <h3>Digital Training</h3>
+
           <p>
             Practical guidance for people who want to become more confident
             using computers, phones and online platforms.
           </p>
+
         </article>
 
+
         <article class="service">
+
           <div class="icon">↗</div>
+
           <h3>Business Support</h3>
+
           <p>
             Administrative and digital support that helps small businesses
             organize information and complete routine online tasks.
           </p>
+
         </article>
 
       </div>
+
     </div>
+
   </section>
 
 
+  <!-- WHY US -->
   <section id="about">
 
     <div class="container why-grid">
 
       <div class="why-box">
 
-        <h3>Digital problems shouldn't stop your progress.</h3>
+        <h3>
+          Digital problems shouldn't stop your progress.
+        </h3>
 
         <p>
-          Tamnya Digital Solutions exists to make difficult digital tasks easier,
-          especially when time, confidence or technical knowledge is limited.
+          Tamnya Digital Solutions exists to make difficult digital tasks
+          easier, especially when time, confidence or technical knowledge
+          is limited.
         </p>
 
       </div>
 
+
       <div class="points">
 
         <div class="point">
+
           <div class="check">✓</div>
+
           <div>
+
             <strong>Clear communication</strong>
-            <span>We explain what needs to be done before starting.</span>
+
+            <span>
+              We explain what needs to be done before starting.
+            </span>
+
           </div>
+
         </div>
 
+
         <div class="point">
+
           <div class="check">✓</div>
+
           <div>
+
             <strong>Professional presentation</strong>
-            <span>Your documents are prepared to look clean, organized and professional.</span>
+
+            <span>
+              Your documents are prepared to look clean, organized and
+              professional.
+            </span>
+
           </div>
+
         </div>
 
+
         <div class="point">
+
           <div class="check">✓</div>
+
           <div>
+
             <strong>Attention to detail</strong>
-            <span>We check forms and files carefully to reduce avoidable mistakes.</span>
+
+            <span>
+              We check forms and files carefully to reduce avoidable mistakes.
+            </span>
+
           </div>
+
         </div>
 
+
         <div class="point">
+
           <div class="check">✓</div>
+
           <div>
+
             <strong>Privacy-conscious service</strong>
-            <span>We treat customers' documents and information with care.</span>
+
+            <span>
+              We treat customers' documents and information with care.
+            </span>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
+  <!-- FOUNDER -->
+  <section class="founder" id="founder">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <h2>Meet the Founder</h2>
+
+        <p>
+          The person behind Tamnya Digital Solutions.
+        </p>
+
+      </div>
+
+
+      <div class="founder-card">
+
+        <!-- PHOTO PLACEHOLDER -->
+        <div class="founder-photo">
+
+          <div class="founder-photo-placeholder">
+
+            <strong>YOUR PHOTO</strong>
+
+            Your professional picture
+            will appear here.
+
+            <br><br>
+
+            Photo coming soon.
+
+          </div>
+
+        </div>
+
+
+        <!-- FOUNDER INFORMATION -->
+        <div class="founder-content">
+
+          <div class="eyebrow">
+            Founder & C.O.E
+          </div>
+
+          <h2>
+            FAHIZU ALHAJI ADAMU
+          </h2>
+
+          <div class="founder-title">
+            C.O.E — TAMNYA DIGITAL SOLUTIONS
+          </div>
+
+          <p>
+            Welcome to Tamnya Digital Solutions. My goal is to make digital
+            services easier, more accessible and more professional for
+            individuals, job seekers, students and small businesses.
+          </p>
+
+          <p>
+            Through practical digital support, we help our customers handle
+            online applications, documents, data-related tasks and other
+            everyday digital needs with confidence.
+          </p>
+
+          <div class="founder-signature">
+            FAHIZU ALHAJI ADAMU
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
   <section class="process" id="process">
 
     <div class="container">
 
       <div class="section-head">
+
         <h2>How It Works</h2>
-        <p>Three simple steps from problem to solution.</p>
+
+        <p>
+          Three simple steps from problem to solution.
+        </p>
+
       </div>
+
 
       <div class="steps">
 
         <div class="step">
+
           <div class="number">1</div>
+
           <h3>Tell Us</h3>
-          <p>Explain the digital task or problem you need help with.</p>
+
+          <p>
+            Explain the digital task or problem you need help with.
+          </p>
+
         </div>
 
+
         <div class="step">
+
           <div class="number">2</div>
+
           <h3>We Prepare</h3>
-          <p>We review the requirements and complete the agreed service carefully.</p>
+
+          <p>
+            We review the requirements and complete the agreed service
+            carefully.
+          </p>
+
         </div>
 
+
         <div class="step">
+
           <div class="number">3</div>
+
           <h3>You Move Forward</h3>
-          <p>Receive your completed documents or application and continue with confidence.</p>
+
+          <p>
+            Receive your completed documents or application and continue
+            with confidence.
+          </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
+  <!-- CTA -->
   <section class="cta">
 
     <div class="container">
 
-      <h2>Have a digital problem?</h2>
+      <h2>
+        Have a digital problem?
+      </h2>
 
       <p>
-        Tell us what you need. If it is within our service, we'll help you find
-        a practical solution.
+        Tell us what you need. If it is within our service, we'll help you
+        find a practical solution.
       </p>
 
       <a
@@ -748,61 +1083,80 @@
       </a>
 
     </div>
+
   </section>
 
 
+  <!-- CONTACT -->
   <section id="contact">
 
     <div class="container">
 
       <div class="section-head">
-        <h2>Let's Work Together</h2>
+
+        <h2>
+          Let's Work Together
+        </h2>
 
         <p>
           Contact TAMNYA DIGITAL SOLUTIONS for professional digital support.
         </p>
+
       </div>
+
 
       <div class="contact-grid">
 
+
         <div class="contact-card">
 
-          <h3>Contact Details</h3>
+          <h3>
+            Contact Details
+          </h3>
 
           <p>
             We're ready to help you with your digital needs.
           </p>
 
+
           <div class="contact-list">
 
             <div>
-              <strong>WhatsApp:</strong> +234 708 469 9832
+              <strong>WhatsApp:</strong>
+              +234 708 469 9832
             </div>
 
             <div>
-              <strong>Email:</strong> tamnyadigitalsolutions@gmail.com
+              <strong>Email:</strong>
+              tamnyadigitalsolutions@gmail.com
             </div>
 
             <div>
-              <strong>Location:</strong> Gembu, Sardauna Local Government,
+              <strong>Location:</strong>
+              Gembu, Sardauna Local Government,
               Taraba State, Nigeria
             </div>
 
             <div>
-              <strong>Hours:</strong> Monday – Saturday
+              <strong>Hours:</strong>
+              Monday – Saturday
             </div>
 
           </div>
+
         </div>
 
 
         <div class="contact-card">
 
-          <h3>Request a Service</h3>
+          <h3>
+            Request a Service
+          </h3>
 
           <p>
             Contact us directly on WhatsApp and tell us what service you need.
           </p>
+
 
           <div class="actions">
 
@@ -815,6 +1169,7 @@
               Message on WhatsApp
             </a>
 
+
             <a
               class="btn btn-secondary"
               href="mailto:tamnyadigitalsolutions@gmail.com"
@@ -823,21 +1178,27 @@
             </a>
 
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 </main>
 
 
+<!-- FOOTER -->
 <footer>
 
   <div class="container footer-inner">
 
     <div>
-      <strong>TAMNYA DIGITAL SOLUTIONS</strong>
+      <strong>
+        TAMNYA DIGITAL SOLUTIONS
+      </strong>
     </div>
 
     <div>
@@ -851,6 +1212,7 @@
   </div>
 
 </footer>
+
 
 </body>
 </html>
