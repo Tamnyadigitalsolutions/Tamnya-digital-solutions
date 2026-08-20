@@ -4,627 +4,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Tamnya Digital Solutions — making digital services simple. Online applications, CVs, document support, data collection and digital assistance.">
+  <meta name="description" content="TAMNYA DIGITAL SOLUTIONS — Digital services, online application support, document preparation, printing, data collection and digital business support.">
 
-  <meta name="theme-color" content="#102a56">
-
-  <!-- TAMNYA APP / PWA SETTINGS -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="TAMNYA">
+  <meta name="theme-color" content="#0b5ed7">
 
   <title>TAMNYA DIGITAL SOLUTIONS</title>
 
-  <style>
-    :root {
-      --navy: #102a56;
-      --navy-dark: #081b3a;
-      --gold: #d99400;
-      --gold-light: #f3b51b;
-      --white: #ffffff;
-      --offwhite: #f7f9fc;
-      --text: #26354a;
-      --muted: #66758a;
-      --border: #e4eaf2;
-      --shadow: 0 18px 50px rgba(16, 42, 86, .10);
-      --radius: 20px;
-    }
+  <!-- Android App Manifest -->
+  <link rel="manifest" href="manifest.json">
 
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--white);
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      background: #f5f8fc;
+      color: #222;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(228,234,242,.85);
+      background: linear-gradient(135deg, #0b5ed7, #063b88);
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
     }
 
-    .nav {
-      min-height: 76px;
+    .logo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: white;
+      margin: 0 auto 15px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      justify-content: center;
+      color: #0b5ed7;
+      font-size: 30px;
+      font-weight: bold;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      color: var(--navy);
-      min-width: 0;
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
     }
 
-    .brand img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .brand span {
-      font-size: 1.05rem;
-      letter-spacing: .2px;
+    header p {
+      font-size: 16px;
     }
 
     nav {
-      display: flex;
-      gap: 26px;
-      align-items: center;
+      background: #ffffff;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
-      color: var(--text);
-      font-weight: 600;
-      font-size: .95rem;
+      color: #0b5ed7;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 8px;
+      font-size: 14px;
     }
 
-    nav a:hover {
-      color: var(--gold);
+    section {
+      padding: 45px 18px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .nav-cta,
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 12px 20px;
-      font-weight: 800;
-      border: 0;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-
-    .nav-cta,
-    .btn-primary {
-      background: var(--navy);
-      color: white;
-      box-shadow: 0 10px 25px rgba(16,42,86,.18);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--navy);
-      border: 1px solid var(--border);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    /* HERO */
     .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(243,181,27,.16), transparent 28%),
-        radial-gradient(circle at 10% 80%, rgba(16,42,86,.08), transparent 32%),
-        linear-gradient(135deg, #fbfcff, #f5f8fc);
-      padding: 92px 0 82px;
-      overflow: hidden;
+      text-align: center;
+      padding-top: 60px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--gold);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: .78rem;
-      margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 34px;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 9px;
-    }
-
-    h1 {
-      color: var(--navy-dark);
-      font-size: clamp(2.6rem, 6vw, 5rem);
-      line-height: 1.02;
-      letter-spacing: -2.5px;
-      margin-bottom: 22px;
-    }
-
-    h1 span {
-      color: var(--gold);
+    .hero h2 {
+      font-size: 32px;
+      color: #063b88;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 650px;
-      font-size: 1.12rem;
-      color: var(--muted);
-      margin-bottom: 30px;
+      max-width: 700px;
+      margin: auto;
+      font-size: 17px;
     }
 
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #0b5ed7;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .hero-card {
+    .button:hover {
+      background: #063b88;
+    }
+
+    h2.section-title {
+      text-align: center;
+      color: #063b88;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .about {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card img {
-      width: min(330px, 80%);
-      margin: 0 auto 20px;
-    }
-
-    .hero-card h3 {
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       text-align: center;
-      color: var(--navy);
-      margin-bottom: 8px;
     }
 
-    .hero-card p {
-      text-align: center;
-      margin: 0;
-      font-size: .95rem;
-    }
-
-    /* GENERAL SECTIONS */
-    section {
-      padding: 86px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 48px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--navy-dark);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-    }
-
-    /* SERVICES */
     .services {
-      background: var(--offwhite);
-    }
-
-    .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
     .service {
       background: white;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 8px 30px rgba(16,42,86,.05);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 35px rgba(16,42,86,.09);
-    }
-
-    .icon {
-      width: 50px;
-      height: 50px;
-      display: grid;
-      place-items: center;
-      background: #fff4d6;
-      color: var(--gold);
-      border-radius: 14px;
-      font-size: 1.4rem;
-      margin-bottom: 18px;
-      font-weight: 900;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
     .service h3 {
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    /* ABOUT */
-    .why-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .why-box {
-      background: var(--navy);
-      color: white;
-      padding: 40px;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .why-box h3 {
-      font-size: 2rem;
-      margin-bottom: 14px;
-    }
-
-    .why-box p {
-      color: #d9e2f1;
-    }
-
-    .points {
-      display: grid;
-      gap: 18px;
-    }
-
-    .point {
-      display: flex;
-      gap: 14px;
-    }
-
-    .check {
-      flex: 0 0 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #fff4d6;
-      color: var(--gold);
-      font-weight: 900;
-    }
-
-    .point strong {
-      color: var(--navy);
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .point span {
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    /* FOUNDER */
-    .founder {
-      background: white;
-    }
-
-    .founder-card {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 45px;
-      align-items: center;
-      background: linear-gradient(135deg, #f8fafc, #ffffff);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 42px;
-      box-shadow: var(--shadow);
-    }
-
-    .founder-photo {
-      width: 240px;
-      height: 280px;
-      margin: auto;
-      border-radius: 28px;
-      background: linear-gradient(145deg, #102a56, #193d76);
-      border: 6px solid white;
-      box-shadow: 0 15px 35px rgba(16,42,86,.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-      color: white;
-    }
-
-    .founder-photo-placeholder {
-      font-size: .9rem;
-      line-height: 1.5;
-    }
-
-    .founder-photo-placeholder strong {
-      display: block;
-      color: var(--gold-light);
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .founder-content .eyebrow {
-      margin-bottom: 12px;
-    }
-
-    .founder-content h2 {
-      color: var(--navy-dark);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-
-    .founder-title {
-      color: var(--gold);
-      font-weight: 900;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-    }
-
-    .founder-content p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .founder-signature {
-      font-weight: 800;
-      color: var(--navy);
-      font-size: 1.05rem;
-    }
-
-    /* PROCESS */
-    .process {
-      background: var(--offwhite);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .step {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      text-align: center;
-    }
-
-    .number {
-      width: 46px;
-      height: 46px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--navy);
-      color: white;
-      font-weight: 900;
-    }
-
-    .step h3 {
-      color: var(--navy);
-      margin-bottom: 7px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    /* CTA */
-    .cta {
-      padding: 70px 0;
-      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: #dbe5f4;
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .contact-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
-      background: white;
-    }
-
-    .contact-card h3 {
-      color: var(--navy);
+      color: #0b5ed7;
       margin-bottom: 10px;
     }
 
-    .contact-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
+    .contact {
+      background: #063b88;
+      color: white;
+      text-align: center;
+      border-radius: 15px;
     }
 
-    .contact-list {
-      display: grid;
-      gap: 12px;
+    .contact h2 {
+      margin-bottom: 15px;
     }
 
-    .contact-list div {
-      padding: 13px 15px;
-      border-radius: 12px;
-      background: var(--offwhite);
+    .contact a {
+      color: white;
+      font-weight: bold;
     }
 
-    .contact-list strong {
-      color: var(--navy);
-    }
-
-    /* FOOTER */
     footer {
-      background: #07162f;
-      color: #d6e0ef;
-      padding: 28px 0;
-      font-size: .9rem;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+    footer strong {
+      color: #4da3ff;
     }
 
-    /* MOBILE */
-    @media (max-width: 850px) {
-
-      nav {
-        display: none;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
       }
 
-      .hero-grid,
-      .why-grid,
-      .contact-grid,
-      .founder-card {
-        grid-template-columns: 1fr;
+      .hero h2 {
+        font-size: 26px;
       }
 
-      .service-grid,
-      .steps {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero {
-        padding-top: 65px;
-      }
-
-      .founder-card {
-        text-align: center;
-      }
-
-      .founder-content .eyebrow {
-        justify-content: center;
-      }
-
-      .founder-photo {
-        width: 220px;
-        height: 260px;
-      }
-    }
-
-    @media (max-width: 560px) {
-
-      .service-grid,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        padding: 24px;
+      nav a {
+        margin: 0 4px;
+        font-size: 12px;
       }
 
       section {
-        padding: 65px 0;
-      }
-
-      .brand span {
-        font-size: .82rem;
-      }
-
-      .nav-cta {
-        padding: 10px 14px;
-        font-size: .85rem;
-      }
-
-      .founder-card {
-        padding: 28px 20px;
-      }
-
-      .founder-photo {
-        width: 190px;
-        height: 230px;
-      }
-
-      .footer-inner {
-        text-align: center;
-        justify-content: center;
+        padding: 35px 15px;
       }
     }
   </style>
@@ -632,554 +200,149 @@
 
 <body>
 
-<header>
-  <div class="container nav">
+  <header>
+    <div class="logo">TDS</div>
 
-    <a class="brand" href="#home">
-      <img
-        src="assets/tamnya-logo.png"
-        alt="Tamnya Digital Solutions logo"
-        onerror="this.style.display='none';"
-      >
+    <h1>TAMNYA DIGITAL SOLUTIONS</h1>
 
-      <span>TAMNYA DIGITAL SOLUTIONS</span>
-    </a>
+    <p>Digital Solutions • Online Services • Data Collection</p>
+  </header>
 
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">Why Us</a>
-      <a href="#founder">Founder</a>
-      <a href="#process">How It Works</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <a class="nav-cta" href="#contact">Get Help</a>
+  <section id="home" class="hero">
+    <h2>Welcome to TAMNYA DIGITAL SOLUTIONS</h2>
 
-  </div>
-</header>
+    <p>
+      Your trusted partner for digital services, online application support,
+      document preparation, printing, data collection and digital business solutions.
+    </p>
 
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <div class="container hero-grid">
-
-      <div>
-
-        <div class="eyebrow">
-          Digital support you can trust
-        </div>
-
-        <h1>
-          Making <span>Digital Services</span> Simple.
-        </h1>
-
-        <p>
-          We help individuals, students, job seekers and small businesses
-          handle digital tasks with clarity, accuracy and confidence.
-        </p>
-
-        <div class="actions">
-
-          <a class="btn btn-primary" href="#contact">
-            Request a Service
-          </a>
-
-          <a class="btn btn-secondary" href="#services">
-            Explore Services
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="hero-card">
-
-        <img
-          src="assets/tamnya-logo.png"
-          alt="Tamnya Digital Solutions logo"
-          onerror="this.style.display='none';"
-        >
-
-        <h3>Your Digital Solution Partner</h3>
-
-        <p>
-          Practical help for applications, documents, data and everyday
-          digital needs.
-        </p>
-
-      </div>
-
-    </div>
-
+    <a class="button" href="#services">Explore Our Services</a>
   </section>
 
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <h2>What We Can Help You Solve</h2>
-
-        <p>
-          Simple, professional support for people who need to get digital work
-          done correctly.
-        </p>
-
-      </div>
-
-
-      <div class="service-grid">
-
-        <article class="service">
-          <div class="icon">⌨</div>
-          <h3>Online Applications</h3>
-          <p>
-            Assistance with online job, scholarship, school and opportunity
-            applications, including document uploads and form completion.
-          </p>
-        </article>
-
-
-        <article class="service">
-          <div class="icon">CV</div>
-          <h3>CV & Motivation Letters</h3>
-          <p>
-            Professional CV formatting and tailored motivation letters designed
-            to present your experience clearly.
-          </p>
-        </article>
-
-
-        <article class="service">
-          <div class="icon">▣</div>
-          <h3>Document Services</h3>
-          <p>
-            Scanning, PDF preparation, document conversion, compression,
-            formatting and other digital document support.
-          </p>
-        </article>
-
-
-        <article class="service">
-          <div class="icon">◉</div>
-          <h3>Data Collection Support</h3>
-          <p>
-            Digital field-data support, survey assistance and KoboCollect-related
-            services for research and field projects.
-          </p>
-        </article>
-
-
-        <article class="service">
-          <div class="icon">▤</div>
-          <h3>Digital Training</h3>
-          <p>
-            Practical guidance for people who want to become more confident
-            using computers, phones and online platforms.
-          </p>
-        </article>
-
-
-        <article class="service">
-          <div class="icon">↗</div>
-          <h3>Business Support</h3>
-          <p>
-            Administrative and digital support that helps small businesses
-            organize information and complete routine online tasks.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHY US -->
   <section id="about">
+    <h2 class="section-title">About Us</h2>
 
-    <div class="container why-grid">
-
-      <div class="why-box">
-
-        <h3>
-          Digital problems shouldn't stop your progress.
-        </h3>
-
-        <p>
-          Tamnya Digital Solutions exists to make difficult digital tasks
-          easier, especially when time, confidence or technical knowledge
-          is limited.
-        </p>
-
-      </div>
-
-
-      <div class="points">
-
-        <div class="point">
-          <div class="check">✓</div>
-          <div>
-            <strong>Clear communication</strong>
-            <span>
-              We explain what needs to be done before starting.
-            </span>
-          </div>
-        </div>
-
-
-        <div class="point">
-          <div class="check">✓</div>
-          <div>
-            <strong>Professional presentation</strong>
-            <span>
-              Your documents are prepared to look clean, organized and
-              professional.
-            </span>
-          </div>
-        </div>
-
-
-        <div class="point">
-          <div class="check">✓</div>
-          <div>
-            <strong>Attention to detail</strong>
-            <span>
-              We check forms and files carefully to reduce avoidable mistakes.
-            </span>
-          </div>
-        </div>
-
-
-        <div class="point">
-          <div class="check">✓</div>
-          <div>
-            <strong>Privacy-conscious service</strong>
-            <span>
-              We treat customers' documents and information with care.
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOUNDER -->
-  <section class="founder" id="founder">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <h2>Meet the Founder</h2>
-
-        <p>
-          The person behind Tamnya Digital Solutions.
-        </p>
-
-      </div>
-
-
-      <div class="founder-card">
-
-        <div class="founder-photo">
-
-          <div class="founder-photo-placeholder">
-
-            <strong>YOUR PHOTO</strong>
-
-            Your professional picture
-            will appear here.
-
-            <br><br>
-
-            Photo coming soon.
-
-          </div>
-
-        </div>
-
-
-        <div class="founder-content">
-
-          <div class="eyebrow">
-            Founder & C.O.E
-          </div>
-
-          <h2>
-            FAHIZU ALHAJI ADAMU
-          </h2>
-
-          <div class="founder-title">
-            C.O.E — TAMNYA DIGITAL SOLUTIONS
-          </div>
-
-          <p>
-            Welcome to Tamnya Digital Solutions. My goal is to make digital
-            services easier, more accessible and more professional for
-            individuals, job seekers, students and small businesses.
-          </p>
-
-          <p>
-            Through practical digital support, we help our customers handle
-            online applications, documents, data-related tasks and other
-            everyday digital needs with confidence.
-          </p>
-
-          <div class="founder-signature">
-            FAHIZU ALHAJI ADAMU
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROCESS -->
-  <section class="process" id="process">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <h2>How It Works</h2>
-
-        <p>
-          Three simple steps from problem to solution.
-        </p>
-
-      </div>
-
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="number">1</div>
-          <h3>Tell Us</h3>
-          <p>
-            Explain the digital task or problem you need help with.
-          </p>
-        </div>
-
-
-        <div class="step">
-          <div class="number">2</div>
-          <h3>We Prepare</h3>
-          <p>
-            We review the requirements and complete the agreed service
-            carefully.
-          </p>
-        </div>
-
-
-        <div class="step">
-          <div class="number">3</div>
-          <h3>You Move Forward</h3>
-          <p>
-            Receive your completed documents or application and continue
-            with confidence.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-  <section class="cta">
-
-    <div class="container">
-
-      <h2>
-        Have a digital problem?
-      </h2>
-
+    <div class="about">
       <p>
-        Tell us what you need. If it is within our service, we'll help you
-        find a practical solution.
+        TAMNYA DIGITAL SOLUTIONS is a digital service business based in
+        Gembu, Sardauna Local Government Area, Taraba State, Nigeria.
       </p>
 
-      <a
-        class="btn"
-        style="background:var(--gold); color:#fff;"
-        href="#contact"
-      >
-        Contact Tamnya
-      </a>
+      <br>
 
+      <p>
+        We help individuals, organizations and small businesses access
+        reliable digital services and establish a stronger online presence.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>C.O.E: FAHIZU ALHAJI ADAMU</strong>
+      </p>
     </div>
-
   </section>
 
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
 
-  <!-- CONTACT -->
-  <section id="contact">
+    <div class="services">
 
-    <div class="container">
-
-      <div class="section-head">
-
-        <h2>
-          Let's Work Together
-        </h2>
-
+      <div class="service">
+        <h3>Digital Services</h3>
         <p>
-          Contact TAMNYA DIGITAL SOLUTIONS for professional digital support.
+          Online services and digital support for individuals and businesses.
         </p>
-
       </div>
 
+      <div class="service">
+        <h3>Online Application Support</h3>
+        <p>
+          Assistance with online applications, registrations and digital forms.
+        </p>
+      </div>
 
-      <div class="contact-grid">
+      <div class="service">
+        <h3>Document Services</h3>
+        <p>
+          Document preparation, printing and other related digital services.
+        </p>
+      </div>
 
+      <div class="service">
+        <h3>Data Collection</h3>
+        <p>
+          Digital field data collection and KoboCollect-based data support.
+        </p>
+      </div>
 
-        <div class="contact-card">
+      <div class="service">
+        <h3>Business Digital Support</h3>
+        <p>
+          Helping small businesses improve their digital presence and reach more customers.
+        </p>
+      </div>
 
-          <h3>
-            Contact Details
-          </h3>
-
-          <p>
-            We're ready to help you with your digital needs.
-          </p>
-
-
-          <div class="contact-list">
-
-            <div>
-              <strong>WhatsApp:</strong>
-              +234 708 469 9832
-            </div>
-
-            <div>
-              <strong>Email:</strong>
-              tamnyadigitalsolutions@gmail.com
-            </div>
-
-            <div>
-              <strong>Location:</strong>
-              Gembu, Sardauna Local Government,
-              Taraba State, Nigeria
-            </div>
-
-            <div>
-              <strong>Hours:</strong>
-              Monday – Saturday
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="contact-card">
-
-          <h3>
-            Request a Service
-          </h3>
-
-          <p>
-            Contact us directly and tell us what service you need.
-          </p>
-
-
-          <div class="actions">
-
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/2347084699832"
-              target="_blank"
-              rel="noopener"
-            >
-              Message on WhatsApp
-            </a>
-
-
-            <a
-              class="btn btn-secondary"
-              href="tel:+2347084699832"
-            >
-              Call Now
-            </a>
-
-
-            <a
-              class="btn btn-secondary"
-              href="mailto:tamnyadigitalsolutions@gmail.com"
-            >
-              Send Email
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="service">
+        <h3>Online Presence</h3>
+        <p>
+          Support for businesses that want to establish a professional presence online.
+        </p>
       </div>
 
     </div>
-
   </section>
 
-</main>
+  <section id="contact">
+    <div class="contact">
+      <h2>Contact TAMNYA DIGITAL SOLUTIONS</h2>
 
+      <p>📍 Gembu, Sardauna LGA, Taraba State, Nigeria</p>
 
-<!-- FOOTER -->
-<footer>
+      <p>
+        📧 Email:
+        <a href="mailto:tamnyadigitalsolutions@gmail.com">
+          tamnyadigitalsolutions@gmail.com
+        </a>
+      </p>
 
-  <div class="container footer-inner">
-
-    <div>
-      <strong>
-        TAMNYA DIGITAL SOLUTIONS
-      </strong>
+      <p>
+        We are ready to help you with your digital needs.
+      </p>
     </div>
+  </section>
 
-    <div>
-      Making Digital Services Simple.
-    </div>
+  <footer>
+    <p>
+      © 2026 <strong>TAMNYA DIGITAL SOLUTIONS</strong>
+    </p>
 
-    <div>
-      © 2026 Tamnya Digital Solutions. All rights reserved.
-    </div>
+    <p>
+      C.O.E: FAHIZU ALHAJI ADAMU
+    </p>
+  </footer>
 
-  </div>
-
-</footer>
-
-
-<!-- SERVICE WORKER REGISTRATION -->
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(function () {
-          console.log("TAMNYA service worker registered.");
-        })
-        .catch(function (error) {
-          console.log("Service worker registration failed:", error);
-        });
-    });
-  }
-</script>
+  <script>
+    // Register the Service Worker
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js")
+          .then(function () {
+            console.log("TAMNYA Digital Solutions app is ready.");
+          })
+          .catch(function (error) {
+            console.log("Service Worker registration failed:", error);
+          });
+      });
+    }
+  </script>
 
 </body>
 </html>
