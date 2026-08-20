@@ -8,7 +8,14 @@
 
   <meta name="theme-color" content="#102a56">
 
-  <title>Tamnya Digital Solutions</title>
+  <!-- TAMNYA APP / PWA SETTINGS -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="TAMNYA">
+
+  <title>TAMNYA DIGITAL SOLUTIONS</title>
 
   <style>
     :root {
@@ -379,8 +386,7 @@
       height: 280px;
       margin: auto;
       border-radius: 28px;
-      background:
-        linear-gradient(145deg, #102a56, #193d76);
+      background: linear-gradient(145deg, #102a56, #193d76);
       border: 6px solid white;
       box-shadow: 0 15px 35px rgba(16,42,86,.15);
       display: flex;
@@ -732,86 +738,62 @@
       <div class="service-grid">
 
         <article class="service">
-
           <div class="icon">⌨</div>
-
           <h3>Online Applications</h3>
-
           <p>
             Assistance with online job, scholarship, school and opportunity
             applications, including document uploads and form completion.
           </p>
-
         </article>
 
 
         <article class="service">
-
           <div class="icon">CV</div>
-
           <h3>CV & Motivation Letters</h3>
-
           <p>
             Professional CV formatting and tailored motivation letters designed
             to present your experience clearly.
           </p>
-
         </article>
 
 
         <article class="service">
-
           <div class="icon">▣</div>
-
           <h3>Document Services</h3>
-
           <p>
             Scanning, PDF preparation, document conversion, compression,
             formatting and other digital document support.
           </p>
-
         </article>
 
 
         <article class="service">
-
           <div class="icon">◉</div>
-
           <h3>Data Collection Support</h3>
-
           <p>
             Digital field-data support, survey assistance and KoboCollect-related
             services for research and field projects.
           </p>
-
         </article>
 
 
         <article class="service">
-
           <div class="icon">▤</div>
-
           <h3>Digital Training</h3>
-
           <p>
             Practical guidance for people who want to become more confident
             using computers, phones and online platforms.
           </p>
-
         </article>
 
 
         <article class="service">
-
           <div class="icon">↗</div>
-
           <h3>Business Support</h3>
-
           <p>
             Administrative and digital support that helps small businesses
             organize information and complete routine online tasks.
           </p>
-
         </article>
 
       </div>
@@ -844,71 +826,47 @@
       <div class="points">
 
         <div class="point">
-
           <div class="check">✓</div>
-
           <div>
-
             <strong>Clear communication</strong>
-
             <span>
               We explain what needs to be done before starting.
             </span>
-
           </div>
-
         </div>
 
 
         <div class="point">
-
           <div class="check">✓</div>
-
           <div>
-
             <strong>Professional presentation</strong>
-
             <span>
               Your documents are prepared to look clean, organized and
               professional.
             </span>
-
           </div>
-
         </div>
 
 
         <div class="point">
-
           <div class="check">✓</div>
-
           <div>
-
             <strong>Attention to detail</strong>
-
             <span>
               We check forms and files carefully to reduce avoidable mistakes.
             </span>
-
           </div>
-
         </div>
 
 
         <div class="point">
-
           <div class="check">✓</div>
-
           <div>
-
             <strong>Privacy-conscious service</strong>
-
             <span>
               We treat customers' documents and information with care.
             </span>
-
           </div>
-
         </div>
 
       </div>
@@ -936,7 +894,6 @@
 
       <div class="founder-card">
 
-        <!-- PHOTO PLACEHOLDER -->
         <div class="founder-photo">
 
           <div class="founder-photo-placeholder">
@@ -955,7 +912,6 @@
         </div>
 
 
-        <!-- FOUNDER INFORMATION -->
         <div class="founder-content">
 
           <div class="eyebrow">
@@ -1014,43 +970,31 @@
       <div class="steps">
 
         <div class="step">
-
           <div class="number">1</div>
-
           <h3>Tell Us</h3>
-
           <p>
             Explain the digital task or problem you need help with.
           </p>
-
         </div>
 
 
         <div class="step">
-
           <div class="number">2</div>
-
           <h3>We Prepare</h3>
-
           <p>
             We review the requirements and complete the agreed service
             carefully.
           </p>
-
         </div>
 
 
         <div class="step">
-
           <div class="number">3</div>
-
           <h3>You Move Forward</h3>
-
           <p>
             Receive your completed documents or application and continue
             with confidence.
           </p>
-
         </div>
 
       </div>
@@ -1154,7 +1098,7 @@
           </h3>
 
           <p>
-            Contact us directly on WhatsApp and tell us what service you need.
+            Contact us directly and tell us what service you need.
           </p>
 
 
@@ -1167,6 +1111,14 @@
               rel="noopener"
             >
               Message on WhatsApp
+            </a>
+
+
+            <a
+              class="btn btn-secondary"
+              href="tel:+2347084699832"
+            >
+              Call Now
             </a>
 
 
@@ -1213,6 +1165,21 @@
 
 </footer>
 
+
+<!-- SERVICE WORKER REGISTRATION -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(function () {
+          console.log("TAMNYA service worker registered.");
+        })
+        .catch(function (error) {
+          console.log("Service worker registration failed:", error);
+        });
+    });
+  }
+</script>
 
 </body>
 </html>
