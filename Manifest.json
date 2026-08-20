@@ -1,0 +1,19 @@
+{
+  "name": "TAMNYA DIGITAL SOLUTIONS",
+  "short_name": "TAMNYA",
+  "description": "TAMNYA DIGITAL SOLUTIONS — Making Digital Services Simple.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#102a56",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "assets/tamnya-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
